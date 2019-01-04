@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.imooc.onetomany.ClassMapper">
+
+	<resultMap id="BaseResultMap" type="com.imooc.onetomany.Class">
+		<id column="cid" property="cid" jdbcType="INTEGER" />
+		<result column="cname" property="cname" jdbcType="VARCHAR" />
+		<collection property="students" ofType="com.imooc.onetomany.Student"
+			column="cid" select="com.imooc.onetomany.StudentMapper.selectStudentByClassId"></collection>
+	</resultMap>
+
+
+
+	<select id="selectClass" resultMap="BaseResultMap">
+		select cid,cname from class
+		where cid = #{id}
+	</select>
+
+
+
+
+</mapper>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Result HTML</h1>
+<h5>intVar:${intVar}</h5>
+<h5>long,double类似</h5>
+<h5>booleanVar:${booleanVar}</h5>
+<h5>nullVar:${nullVar}</h5>
+<h5>nullVar:${nullVar!'我是默认值'}</h5>
+<h5>missVar:${abvas}</h5>
+<h5>intVar+1:${intVar+1}</h5>
+
+<h5>listVar(Student)</h5>
+<#list  listVar as item>
+ ID:${item.id}----Name:${item.name}----Sex:${item.sex}
+ 
+  <#if item.sex==1>
+       女
+   <#elseif item.sex==2>
+       男
+   <#else>
+       其他
+   </#if>
+ 
+ 
+ <br/>
+</#list>
+<br/>
+<h5>mapVar</h5>
+<#list  mapVar?keys as key>
+${key}----${mapVar[key]}<br/>
+</#list>
+<br/>
+<h5>Switch</h5>
+<#switch switchVar>
+<#case 61>61 <#break>
+<#case 62>62 <#break>
+<#default>63
+</#switch>
+<br/>
+
+---
+${dateVar?string('yyyy-MM-dd HH:mm:ss')} //日期格式
+
+</body>
+</html>
