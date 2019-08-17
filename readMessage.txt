@@ -44,6 +44,9 @@ SpringMVCDemo
     jar project ,not maven
     upload,download,ajax,excel,yanzhangma验证码
 
+springsecuritydemo
+    Maven,IDEA
+
 SSMDemo
     普通javaweb项目
 SSSMaven 
