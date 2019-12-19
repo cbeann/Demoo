@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="student" class="myioc.entity.Student" scope="prototype">
+        <property name="name" value="CBeann"/>
+        <property name="age" value="18"/>
+    </bean>
+    <bean id="book" class="myioc.entity.Book" scope="singleton">
+
+    </bean>
+    <bean id="studentService" class="myioc.entity.StudentService" scope="singleton">
+        <property name="studentDao" ref="studentDao"/>
+    </bean>
+    <bean id="studentDao" class="myioc.entity.StudentDao" scope="singleton">
+    </bean>
+</beans>
